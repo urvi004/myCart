@@ -9,7 +9,8 @@ import {CartState} from "../context/Context"
 const Header = () => {
   const {
     state: {cart},
-    dispatch
+    dispatch,
+    productDispatch
   } = CartState();
 
   return (
@@ -23,6 +24,14 @@ const Header = () => {
           placeholder="Search a product"
           className="m-auto"
           style={{width: 500 }}
+          onChange={(e)=> {
+            productDispatch({
+                type: "FILTER_BY_SEARCH",
+                payload: e.target.value
+                
+            })
+        }}
+      
         />
       </Navbar.Text>
       <Nav>
