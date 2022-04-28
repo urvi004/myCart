@@ -5,6 +5,7 @@ import SingleProduct from './SingleProduct';
 import './styles.css';
 
 
+
 const Home = () => {
 const {
     state : {products},

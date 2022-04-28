@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import { Button, Form } from 'react-bootstrap';
 import Rating from './Rating';
+import {CartState} from "../context/Context"
 
 const Filters = () => {
 
      const [rate, setRate] = useState(3);
+     
 
   return (
     <div className="filters">
